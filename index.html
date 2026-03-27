@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>👑 El Laboratorio de Juanita</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════
+       PANTALLA DE BIENVENIDA
+  ══════════════════════════════════════ -->
+  <div id="welcome-screen" class="screen active">
+    <div class="stars-bg"></div>
+    <div class="welcome-content">
+      <div class="title-block">
+        <div class="title-crown">👑</div>
+        <h1 class="main-title">El Laboratorio<br>de Juanita</h1>
+        <p class="subtitle">Ciencia, magia y mucha aventura</p>
+      </div>
+
+      <!-- RUMI -->
+      <div class="rumi-welcome" id="rumi-welcome">
+        <div class="rumi-figure" id="rumi-svg-welcome">
+          <!-- SVG generado en rumi.js -->
+        </div>
+        <div class="rumi-bubble welcome-bubble">
+          <span id="welcome-msg">¡Hola Juanita! 🚀 Soy <strong>Rumi</strong>, tu mentora de ingeniería. ¡Preparate porque hoy vamos a romper moldes y aprender cosas INCREÍBLES!</span>
+        </div>
+      </div>
+
+      <div class="game-grid">
+        <button class="game-btn btn-sumas" data-game="sumas">
+          <span class="game-icon">➕</span>
+          <span class="game-label">Sumas</span>
+        </button>
+        <button class="game-btn btn-electricidad" data-game="electricidad">
+          <span class="game-icon">⚡</span>
+          <span class="game-label">Electricidad</span>
+        </button>
+        <button class="game-btn btn-poleas" data-game="poleas">
+          <span class="game-icon">🌀</span>
+          <span class="game-label">Poleas</span>
+        </button>
+        <button class="game-btn btn-engranajes" data-game="engranajes">
+          <span class="game-icon">⚙️</span>
+          <span class="game-label">Engranajes</span>
+        </button>
+        <button class="game-btn btn-palabras" data-game="palabras">
+          <span class="game-icon">📝</span>
+          <span class="game-label">Palabras</span>
+        </button>
+      </div>
+
+      <div class="stars-bar">
+        <span class="star-icon">⭐</span>
+        <span id="total-stars">0</span>
+        <span class="star-label"> estrellas</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       PANTALLA SUMAS
+  ══════════════════════════════════════ -->
+  <div id="sumas-screen" class="screen game-screen">
+    <div class="game-header">
+      <button class="back-btn" data-target="welcome">← Inicio</button>
+      <h2>➕ Sumas Mágicas</h2>
+      <div class="stars-mini">⭐ <span class="stars-count">0</span></div>
+    </div>
+    <div class="rumi-strip">
+      <div class="rumi-small" id="rumi-sumas"></div>
+      <div class="rumi-bubble small-bubble" id="rumi-msg-sumas">¡Vamos Juanita! ¡Las matemáticas son la base de toda ingeniería! 🔢⚡</div>
+    </div>
+    <div id="sumas-content" class="game-content"></div>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       PANTALLA ELECTRICIDAD
+  ══════════════════════════════════════ -->
+  <div id="electricidad-screen" class="screen game-screen">
+    <div class="game-header">
+      <button class="back-btn" data-target="welcome">← Inicio</button>
+      <h2>⚡ Circuitos</h2>
+      <div class="stars-mini">⭐ <span class="stars-count">0</span></div>
+    </div>
+    <div class="rumi-strip">
+      <div class="rumi-small" id="rumi-electricidad"></div>
+      <div class="rumi-bubble small-bubble" id="rumi-msg-electricidad">¡La electricidad es MAGIA real! Conectá los cables y hacé que todo brille ⚡🔋</div>
+    </div>
+    <div id="electricidad-content" class="game-content"></div>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       PANTALLA POLEAS
+  ══════════════════════════════════════ -->
+  <div id="poleas-screen" class="screen game-screen">
+    <div class="game-header">
+      <button class="back-btn" data-target="welcome">← Inicio</button>
+      <h2>🌀 Poleas</h2>
+      <div class="stars-mini">⭐ <span class="stars-count">0</span></div>
+    </div>
+    <div class="rumi-strip">
+      <div class="rumi-small" id="rumi-poleas"></div>
+      <div class="rumi-bubble small-bubble" id="rumi-msg-poleas">¡Con poleas podés levantar cosas MUY pesadas con poca fuerza! ¡Eso es ingeniería! 🌀💪</div>
+    </div>
+    <div id="poleas-content" class="game-content"></div>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       PANTALLA ENGRANAJES
+  ══════════════════════════════════════ -->
+  <div id="engranajes-screen" class="screen game-screen">
+    <div class="game-header">
+      <button class="back-btn" data-target="welcome">← Inicio</button>
+      <h2>⚙️ Engranajes</h2>
+      <div class="stars-mini">⭐ <span class="stars-count">0</span></div>
+    </div>
+    <div class="rumi-strip">
+      <div class="rumi-small" id="rumi-engranajes"></div>
+      <div class="rumi-bubble small-bubble" id="rumi-msg-engranajes">Los engranajes son el corazón de las máquinas. ¡Hacelos girar juntos! ⚙️🔥</div>
+    </div>
+    <div id="engranajes-content" class="game-content"></div>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       PANTALLA PALABRAS
+  ══════════════════════════════════════ -->
+  <div id="palabras-screen" class="screen game-screen">
+    <div class="game-header">
+      <button class="back-btn" data-target="welcome">← Inicio</button>
+      <h2>📝 Lab de Palabras</h2>
+      <div class="stars-mini">⭐ <span class="stars-count">0</span></div>
+    </div>
+    <div class="rumi-strip">
+      <div class="rumi-small" id="rumi-palabras"></div>
+      <div class="rumi-bubble small-bubble" id="rumi-msg-palabras">¡Bienvenida a mi LABORATORIO DE PALABRAS! 🧪📝 Las palabras son la ingeniería del pensamiento. ¡Vamos!</div>
+    </div>
+
+    <!-- Selector de sub-juego -->
+    <div id="palabras-menu" class="palabras-menu">
+      <button class="palabras-btn" data-subjuego="letra-inicial">
+        <span>🔤</span> ¿Con qué letra empieza?
+      </button>
+      <button class="palabras-btn" data-subjuego="completar">
+        <span>✏️</span> Completar la palabra
+      </button>
+      <button class="palabras-btn" data-subjuego="unir">
+        <span>🔗</span> Unir imagen y palabra
+      </button>
+      <button class="palabras-btn" data-subjuego="ahorcado">
+        <span>🎪</span> Ahorcado Mágico
+      </button>
+    </div>
+
+    <div id="palabras-content" class="game-content" style="display:none;"></div>
+    <button id="palabras-back-menu" class="back-menu-btn" style="display:none;">← Volver a los juegos</button>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       CONFETTI OVERLAY
+  ══════════════════════════════════════ -->
+  <div id="confetti-overlay" class="confetti-overlay" style="display:none;"></div>
+
+  <!-- Scripts -->
+  <script type="module" src="games/rumi.js"></script>
+  <script type="module" src="games/app.js"></script>
+</body>
+</html>
